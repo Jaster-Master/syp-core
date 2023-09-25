@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(o => { o.AddSwaggerGenHeader(); });
 
 var connectionString = builder.Configuration.GetConnectionString("SqliteConnection");
-builder.Services.AddDbContext<CoreSecureContext>(db => db.UseSqlite(connectionString));
+builder.Services.AddDbContext<CoreContext>(db => db.UseSqlite(connectionString));
 builder.Services.AddScoped<UserFavoritesService>();
 builder.Services.AddHostedService<DatabaseBackgroundService>();
 
