@@ -12,7 +12,10 @@ export const getPluginListHandler: IncomingMessageHandler<"getPluginList"> = (_m
             startDate: plugin.info.startDate,
             endDate: plugin.info.endDate,
             image: plugin.info.image,
-            targetUserGroups: plugin.info.targetUserGroups
+            targetUserGroups: plugin.info.targetUserGroups,
+            repoUrl: plugin.info.repoUrl,
+            repoOwner: plugin.info.repoOwner,
+            repoName: plugin.info.repoName
         };
     });
 

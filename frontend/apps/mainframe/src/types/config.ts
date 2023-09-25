@@ -20,4 +20,7 @@ export interface MainframePluginInfos {
     endDate: string;
     image: string;
     targetUserGroups?: Array<"staff" | "teacher" | "student">;
+    repoUrl: string;
+    repoOwner: string;
+    repoName: string;
 }

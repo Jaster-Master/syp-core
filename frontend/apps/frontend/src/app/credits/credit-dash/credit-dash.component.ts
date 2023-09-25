@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import {environment} from "../../../environments/environment";
+import {Component} from "@angular/core";
+import {Plugin, PluginListService} from "mainframe-connector";
 
 @Component({
   selector: "app-credit-dash",
@@ -7,6 +7,13 @@ import {environment} from "../../../environments/environment";
   styleUrls: ["./credit-dash.component.css"],
 })
 export class CreditDashComponent {
-  plugins = environment.plugins;
-  constructor() {}
+  plugins: Plugin[] = [];
+
+  constructor(private pluginService: PluginListService) {
+    this.pluginService.getPluginList().then((pluginList: Plugin[]) => {
+      pluginList.forEach((plugin) => {
+        this.plugins.push(plugin);
+      });
+    });
+  }
 }

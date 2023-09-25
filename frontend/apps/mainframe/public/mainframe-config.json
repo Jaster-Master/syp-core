@@ -2,41 +2,62 @@
     "plugins": {
         "polls": {
             "url": "http://localhost:4202",
-            "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-polls",
             "info": {
                 "name": "Umfragen",
                 "description": "Plugin Polls",
-                "teachers": ["Teacher1", "Teacher2"],
-                "tags": ["dua moi wos"],
+                "teachers": [
+                    "Teacher1",
+                    "Teacher2"
+                ],
+                "tags": [
+                    "dua moi wos"
+                ],
                 "startDate": "1662789600",
                 "endDate": "1663221600",
-                "image": "https://gemeindebund.at/website2020/wp-content/uploads/2020/07/umfrage-fragebogen_br_cirquedesprit-fotolia-com-3.jpg"
+                "image": "https://gemeindebund.at/website2020/wp-content/uploads/2020/07/umfrage-fragebogen_br_cirquedesprit-fotolia-com-3.jpg",
+                "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-polls",
+                "repoOwner": "htl-grieskirchen-core",
+                "repoName": "plugin-polls"
             }
         },
         "quote-of-today": {
             "url": "http://localhost:4202",
-            "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-quote-of-today",
             "info": {
                 "name": "Quote of Today",
                 "description": "Quote of Today on Login Screen",
-                "teachers": ["Teacher1", "Teacher2"],
-                "tags": ["quotes"],
+                "teachers": [
+                    "Teacher1",
+                    "Teacher2"
+                ],
+                "tags": [
+                    "quotes"
+                ],
                 "startDate": "1662789600",
                 "endDate": "1663221600",
-                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg"
+                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg",
+                "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-quote-of-today",
+                "repoOwner": "htl-grieskirchen-core",
+                "repoName": "plugin-quote-of-today"
             }
         },
         "seatmap": {
             "url": "http://localhost:4300",
-            "repoUrl": "https://github.com/rgrueneisHtlgkr/plugin-seatmap",
             "info": {
                 "name": "Seatmap",
                 "description": "Seatmap made by Grueneis",
-                "teachers": ["Teacher1", "Teacher2"],
-                "tags": ["seatmap"],
+                "teachers": [
+                    "Teacher1",
+                    "Teacher2"
+                ],
+                "tags": [
+                    "seatmap"
+                ],
                 "startDate": "1662789600",
                 "endDate": "1663221600",
-                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg"
+                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg",
+                "repoUrl": "https://github.com/rgrueneisHtlgkr/plugin-seatmap",
+                "repoOwner": "htl-grieskirchen-core",
+                "repoName": "plugin-seatmap"
             }
         }
     },
