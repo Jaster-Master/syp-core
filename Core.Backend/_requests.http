@@ -1,0 +1,56 @@
+@baseUrl = http://localhost:5256
+
+
+################################################## classes
+GET {{baseUrl}}/classes
+#####
+
+################################################## Pdf
+GET {{baseUrl}}/Pdf/DownloadTestFile
+#####
+GET {{baseUrl}}/Pdf/ReadFile?fileName=abc&fullPath=abc
+#####
+POST {{baseUrl}}/Pdf/Create
+Content-type: application/json
+
+{
+   "clazzName": "abc",
+   "roomName": "abc",
+   "imageBase64": "abc",
+   "studentPcList": 
+   [{
+      "studentName": "abc",
+      "pcNr": 1
+   }]
+}
+#####
+
+################################################## rooms
+GET {{baseUrl}}/rooms
+#####
+
+################################################## Sample
+GET {{baseUrl}}/Sample/AuthorizeTest
+#####
+GET {{baseUrl}}/Sample/Test
+#####
+
+################################################## seats
+GET {{baseUrl}}/seats?roomName=abc
+#####
+
+################################################## students
+GET {{baseUrl}}/students
+#####
+
+################################################## User
+DELETE {{baseUrl}}/User/RemoveFavorite?PluginId=abc
+#####
+GET {{baseUrl}}/User/Favorites
+#####
+POST {{baseUrl}}/User/AddFavorite?PluginId=abc
+#####
+
+################################################## Values
+GET {{baseUrl}}/Values/Persons
+#####
