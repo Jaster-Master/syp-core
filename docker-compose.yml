@@ -1,0 +1,8 @@
+﻿services:
+  core.backend:
+    image: core.backend
+    ports:
+        - "7022:7022"
+    build:
+      context: .
+      dockerfile: Core.Backend/Dockerfile

@@ -32,7 +32,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.AuthLib", "Core.AuthLib\Core.AuthLib.csproj", "{BE4A3385-81BB-4571-BCE2-A35838EF0F51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Database", "Core.Database\Core.Database.csproj", "{A834D5AC-301D-48A8-966B-DD643F9DCC68}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.WebUntis.Tests", "Core.WebUntis.Tests\Core.WebUntis.Tests.csproj", "{7B7922CC-10B9-40A5-B529-E80F47B51211}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF8C01A5-0373-4A67-A3F8-7FAE1AA5A0BF}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
