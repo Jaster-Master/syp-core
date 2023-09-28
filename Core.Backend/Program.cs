@@ -2,10 +2,8 @@ using Core.AuthLib;
 using Core.Backend;
 using Core.Backend.Services;
 using Core.Database;
-using Core.Secure.Database;
 using CorePlugin.Plugin.Services;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 PluginLoader.LoadPlugins("plugins");
 
@@ -35,7 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(app => app.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseRouting();
 app.UseAuthentication();
