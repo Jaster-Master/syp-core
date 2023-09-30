@@ -1,8 +1,16 @@
 ﻿services:
-  core.backend:
-    image: core.backend
-    ports:
-        - "7022:7022"
-    build:
-      context: .
-      dockerfile: Core.Backend/Dockerfile
+    core.backend:
+        image: core.backend
+        ports:
+            - "7022:7022"
+        build:
+            context: .
+            dockerfile: Core.Backend/Dockerfile
+
+    core.backend.secure:
+        image: core.backend.secure
+        ports:
+            - "7139:7139"
+        build:
+            context: .
+            dockerfile: Core.Backend.Secure/Dockerfile
