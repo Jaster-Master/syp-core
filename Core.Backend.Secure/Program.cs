@@ -6,7 +6,6 @@ using Core.Ldap.Implementation;
 using Core.Ldap.Interface;
 using Core.Secure.Database;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,3 +62,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
