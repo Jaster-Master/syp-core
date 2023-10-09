@@ -1,12 +1,11 @@
 export interface MainframeConfig {
     plugins: Record<string, MainframePlugin>;
-    login: { url: string };
-    navigation: { url: string };
-    secureBackendUrl: string;
+    login: { subRoute: string };
+    navigation: { subRoute: string };
 }
 
 export interface MainframePlugin {
-    url?: string;
+    subRoute?: string;
     permissions: string[];
     info: MainframePluginInfos;
 }

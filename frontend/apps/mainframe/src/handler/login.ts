@@ -3,9 +3,10 @@ import { IncomingMessageHandler } from "../types/handler";
 import { clearFrameContainer, createPluginFrame } from "../utils/frame";
 import {addMessageListenerToFrame} from "../utils/message";
 import {createIncomingMessageHandler} from "../app/handler";
+import {environment} from "apps/environments/environment";
 
 export const login: IncomingMessageHandler<"login"> = (message, context) => {
-    fetch(context.config.secureBackendUrl + "/Auth/Login", {
+    fetch(environment.secureBackendUrl + "/Auth/Login", {
         method: "POST",
         headers: {
             "Accept": "application/json",
@@ -22,7 +23,7 @@ export const login: IncomingMessageHandler<"login"> = (message, context) => {
         } else {
             if (message.data.redirect) {
                 clearFrameContainer("login-container");
-                createPluginFrame(context.config.navigation.url, "nav-container");
+                createPluginFrame(environment.ipAddress + context.config.navigation.subRoute, "nav-container");
                 addMessageListenerToFrame("nav-container", createIncomingMessageHandler({
                     config: context.config,
                     sender: "navigation"

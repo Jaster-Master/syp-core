@@ -1,8 +1,9 @@
-import { IncomingMessageHandler } from "../types/handler";
-import { sendMessageToFrame } from "../utils/message";
+import {IncomingMessageHandler} from "../types/handler";
+import {sendMessageToFrame} from "../utils/message";
+import {environment} from "apps/environments/environment";
 
-export const sendRequest: IncomingMessageHandler<"sendRequest"> = (message, context) => {
-    fetch(context.config.secureBackendUrl + message.data.path, {
+export const sendRequest: IncomingMessageHandler<"sendRequest"> = (message, _) => {
+    fetch(environment.secureBackendUrl + message.data.path, {
         method: message.data.method,
         body: message.data.payload ?? undefined,
         credentials: "include",

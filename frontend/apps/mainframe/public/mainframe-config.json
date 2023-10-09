@@ -1,7 +1,7 @@
 ﻿{
     "plugins": {
         "polls": {
-            "url": "http://localhost:4202",
+            "subRoute": ":4202",
             "info": {
                 "name": "Umfragen",
                 "description": "Plugin Polls",
@@ -21,7 +21,7 @@
             }
         },
         "quote-of-today": {
-            "url": "http://localhost:4202",
+            "subRoute": ":4202",
             "info": {
                 "name": "Quote of Today",
                 "description": "Quote of Today on Login Screen",
@@ -41,7 +41,7 @@
             }
         },
         "seatmap": {
-            "url": "http://localhost:4300",
+            "subRoute": ":4300",
             "info": {
                 "name": "Seatmap",
                 "description": "Seatmap made by Grueneis",
@@ -62,10 +62,9 @@
         }
     },
     "login": {
-        "url": "http://localhost:4200/login"
+        "subRoute": ":4200/login"
     },
     "navigation": {
-        "url": "http://localhost:4201/"
-    },
-    "secureBackendUrl": "http://localhost:7139"
+        "subRoute": ":4201/"
+    }
 }

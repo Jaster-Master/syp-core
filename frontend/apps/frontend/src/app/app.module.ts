@@ -8,12 +8,12 @@ import {HomeModule} from "./home/home.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {SettingsModule} from "./settings/settings.module";
 import {HttpClientModule} from "@angular/common/http";
-import {environment} from "../environments/environment";
+import {environment} from "apps/environments/environment";
 
 @NgModule({
   declarations: [AppComponent],
   providers: [
-    { provide: "BACKEND_URL", useValue: environment.backendURL }
+    { provide: "BACKEND_URL", useValue: environment.backendUrl }
   ],
   bootstrap: [AppComponent],
   imports: [

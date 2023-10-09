@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "apps/auth/src/environments/environment";
+import {environment} from "apps/environments/environment";
 
 @Component({
   selector: "app-daily-quote",

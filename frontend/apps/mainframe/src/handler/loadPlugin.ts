@@ -2,6 +2,7 @@ import { IncomingMessageHandler } from "../types/handler";
 import { clearFrameContainer, createPluginFrame } from "../utils/frame";
 import { addMessageListenerToFrame } from "../utils/message";
 import { createIncomingMessageHandler } from "../app/handler";
+import {environment} from "apps/environments/environment";
 
 export const loadPluginHandler: IncomingMessageHandler<"loadPlugin"> = (message, context) => {
     if (message.data.id === null) {
@@ -17,7 +18,7 @@ export const loadPluginHandler: IncomingMessageHandler<"loadPlugin"> = (message,
 
     clearFrameContainer("plugin-container");
 
-    const pluginURL = plugin.url ?? document.location.origin.replace("mainframe", message.data.id + ".plugin");
+    const pluginURL = environment.ipAddress + plugin.subRoute ?? document.location.origin.replace("mainframe", message.data.id + ".plugin");
 
     createPluginFrame(pluginURL, "plugin-container");
     addMessageListenerToFrame("plugin-container", createIncomingMessageHandler({
