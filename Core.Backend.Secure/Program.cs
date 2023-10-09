@@ -6,19 +6,8 @@ using Core.Ldap.Implementation;
 using Core.Ldap.Interface;
 using Core.Secure.Database;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-});
 
 builder.Services.AddRouting();
 
@@ -31,7 +20,7 @@ builder.Services.AddScoped<CredService>();
 builder.Services.AddSingleton<JwtService>();
 builder.Services.AddTransient<UserService>();
 builder.Services.AddTransient<AuthService>();
-builder.Services.AddSingleton<RSA>(RsaService.ImportRSAKey("./keys/" + builder.Configuration["RSA:private-key"], true));
+builder.Services.AddSingleton(RsaService.ImportRSAKey("./keys/" + builder.Configuration["RSA:private-key"], true));
 
 builder.Services.Configure<LdapConfiguration>(builder.Configuration.GetSection("LDAPConfiguration"));
 builder.Services.AddTransient<ILdapClient, LdapClient>();
@@ -60,13 +49,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors();
-/*app.UseCors(policyBuilder => policyBuilder
+app.UseCors(policyBuilder => policyBuilder
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
     .WithOrigins(app.Configuration["MainframeOrigin"])
-);*/
+);
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 logger.LogInformation("Configured mainframe origin to {Origin}", app.Configuration["MainframeOrigin"]);
 
