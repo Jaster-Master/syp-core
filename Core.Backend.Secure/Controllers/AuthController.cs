@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Core.AuthLib;
 using Core.Backend.Secure.Auth;
 using Core.Backend.Secure.Services;
@@ -65,7 +66,18 @@ public class AuthController : ControllerBase
         SignInResult signInResult;
         try
         {
-            signInParams.Password = _credService.DecryptPw(signInParams.Password) ?? signInParams.Password;
+            try
+            {
+                signInParams.Password = _credService.DecryptPw(signInParams.Password) ?? signInParams.Password;
+            }
+            catch (CryptographicException e)
+            {
+                if (e.Message != "The length of the data to decrypt is not valid for the size of this key.")
+                {
+                    throw;
+                }
+            }
+
             signInResult = _authService.SignIn(signInParams);
         }
         catch (Exception e) when (e is InvalidLoginException or LdapNotReachableException)
