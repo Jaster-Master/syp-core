@@ -42,6 +42,8 @@ app.UseCors(policyBuilder => policyBuilder
     .WithOrigins(app.Configuration["MainframeOrigin"])
 );
 
+app.UseHttpsRedirection();
+
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
