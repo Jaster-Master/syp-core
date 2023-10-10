@@ -1,0 +1,6 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SecureBackend" type="DotNetFolderPublish" factoryName="Publish to folder">
+    <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" target_folder="//10.90.0.11/syp-core/SecureBackendPublish" target_framework="net6.0" uuid_high="2663329830102386035" uuid_low="-5538561917348576030" />
+    <method v="2" />
+  </configuration>
+</component>

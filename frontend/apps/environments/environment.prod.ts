@@ -1,4 +1,4 @@
-const baseIp = "http://localhost";
+const baseIp = "http://10.90.0.11";
 export const environment = {
   production: true,
   ipAddress: baseIp,
