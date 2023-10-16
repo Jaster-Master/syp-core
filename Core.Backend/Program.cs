@@ -35,12 +35,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+var allowedOrigins = app.Configuration.GetSection("AllowedOrigins").Get<string[]>();
 app.UseCors(policyBuilder => policyBuilder
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
-    .WithOrigins(app.Configuration["AllowedOrigins"]!)
+    .WithOrigins(allowedOrigins)
 );
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
+logger.LogInformation("Allowed origins:");
+foreach (var allowedOrigin in allowedOrigins)
+{
+    logger.LogInformation(allowedOrigin);
+}
 
 app.UseRouting();
 app.UseAuthentication();

@@ -27,6 +27,11 @@ public static class PluginLoader
     public static void LoadPlugins(string folder)
     {
         Console.WriteLine("x--------------------[Loading Plugins]---------------------x");
+        if (!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);
+        }
+
         var pluginDirectories = Directory.GetDirectories(folder);
         foreach (var pluginDirectory in pluginDirectories)
         {
