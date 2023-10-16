@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Core.AuthLib;
 using Core.Backend.Secure.Auth;
 using Core.Backend.Secure.Services;
@@ -65,7 +66,6 @@ public class AuthController : ControllerBase
         SignInResult signInResult;
         try
         {
-            signInParams.Password = _credService.DecryptPw(signInParams.Password) ?? signInParams.Password;
             signInResult = _authService.SignIn(signInParams);
         }
         catch (Exception e) when (e is InvalidLoginException or LdapNotReachableException)
@@ -84,8 +84,8 @@ public class AuthController : ControllerBase
             HttpOnly = true,
             IsEssential = true,
             Expires = valid,
-            Secure = true,
-            SameSite = SameSiteMode.None
+            // Secure = true, // Is used for HTTPS connection
+            // SameSite = SameSiteMode.None // Is used for HTTPS connection
         };
 
         var token = _jwtService.GenerateToken(new AuthToken()

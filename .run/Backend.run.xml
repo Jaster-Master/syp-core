@@ -1,0 +1,6 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Backend" type="DotNetFolderPublish" factoryName="Publish to folder">
+    <riderPublish configuration="Release" platform="Any CPU" produce_single_file="true" runtime="win-x64" target_folder="//10.90.0.11/syp-core/BackendPublish" target_framework="net6.0" uuid_high="7460559919889531029" uuid_low="-9097881192184835960" />
+    <method v="2" />
+  </configuration>
+</component>

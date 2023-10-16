@@ -62,7 +62,7 @@
         }
     },
     "login": {
-        "subRoute": ":4200/login"
+        "subRoute": ":4200/"
     },
     "navigation": {
         "subRoute": ":4201/"

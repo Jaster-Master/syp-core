@@ -1,8 +1,6 @@
 import {AfterViewInit, Component} from "@angular/core";
 import type {AccordionInterface, AccordionItem, AccordionOptions} from "flowbite";
 import {Accordion} from "flowbite";
-import {MainframeService} from "../../../../auth/src/app/mainframe.service";
-import {CredService} from "../../../../auth/src/app/core/cred.service";
 import {OnboardingService} from "../../../../auth/src/app/onboarding.service";
 
 @Component({
@@ -25,9 +23,7 @@ export class SettingsComponent implements AfterViewInit {
   token: string = "";
   changeAnswer: string = "";
 
-  constructor(private credService: CredService,
-              private mainframe: MainframeService,
-              private onboarding: OnboardingService) {
+  constructor(private onboarding: OnboardingService) {
   }
 
   async click(credentials: string) {

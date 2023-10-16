@@ -35,7 +35,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(policyBuilder => policyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(policyBuilder => policyBuilder
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials()
+    .WithOrigins(app.Configuration["MainframeOrigin"])
+);
 
 app.UseRouting();
 app.UseAuthentication();
