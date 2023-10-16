@@ -9,7 +9,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "\\\\10.90.0.11\\syp-core-frontend\\core\\auth",
+        "outputPath": "dist/apps/auth",
         "index": "apps/auth/src/index.html",
         "main": "apps/auth/src/main.ts",
         "polyfills": "apps/auth/src/polyfills.ts",

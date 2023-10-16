@@ -10,7 +10,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "\\\\10.90.0.11\\syp-core-frontend\\core\\mainframe"
+        "outputPath": "dist/apps/mainframe"
       },
       "configurations": {
         "development": {

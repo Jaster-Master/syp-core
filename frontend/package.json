@@ -5,7 +5,7 @@
     "dev:auth": "nx serve auth",
     "dev:frontend": "nx serve frontend",
     "ng": "nx",
-    "build": "nx reset & nx build auth & nx build frontend & nx build mainframe",
+    "build": "nx reset & nx build auth --output-path=\"\\\\10.90.0.11\\syp-core-frontend\\core\\auth\" & nx build frontend --output-path=\"\\\\10.90.0.11\\syp-core-frontend\\core\\frontend\" & nx build mainframe --output-path=\"\\\\10.90.0.11\\syp-core-frontend\\core\\mainframe\"",
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "lint": "nx lint --run-many --all --target=lint",
