@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using Core.AuthLib;
 using Core.AuthLib.Services;
 using Core.Backend.Secure.Services;
@@ -53,7 +52,7 @@ app.UseCors(policyBuilder => policyBuilder
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
-    .WithOrigins(app.Configuration["MainframeOrigin"])
+    .WithOrigins(app.Configuration["AllowedOrigins"])
 );
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 logger.LogInformation("Configured mainframe origin to {Origin}", app.Configuration["MainframeOrigin"]);

@@ -39,26 +39,6 @@
                 "repoOwner": "htl-grieskirchen-core",
                 "repoName": "plugin-quote-of-today"
             }
-        },
-        "seatmap": {
-            "subRoute": ":4300",
-            "info": {
-                "name": "Seatmap",
-                "description": "Seatmap made by Grueneis",
-                "teachers": [
-                    "Teacher1",
-                    "Teacher2"
-                ],
-                "tags": [
-                    "seatmap"
-                ],
-                "startDate": "1662789600",
-                "endDate": "1663221600",
-                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg",
-                "repoUrl": "https://github.com/rgrueneisHtlgkr/plugin-seatmap",
-                "repoOwner": "htl-grieskirchen-core",
-                "repoName": "plugin-seatmap"
-            }
         }
     },
     "login": {

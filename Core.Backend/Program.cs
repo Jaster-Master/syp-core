@@ -39,7 +39,7 @@ app.UseCors(policyBuilder => policyBuilder
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
-    .WithOrigins(app.Configuration["MainframeOrigin"])
+    .WithOrigins(app.Configuration["AllowedOrigins"]!)
 );
 
 app.UseRouting();

@@ -8,7 +8,7 @@
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
-        "outputPath": "dist/apps/frontend",
+        "outputPath": "\\\\10.90.0.11\\syp-core-frontend\\core\\frontend",
         "index": "apps/frontend/src/index.html",
         "main": "apps/frontend/src/main.ts",
         "polyfills": "apps/frontend/src/polyfills.ts",
