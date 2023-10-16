@@ -66,18 +66,6 @@ public class AuthController : ControllerBase
         SignInResult signInResult;
         try
         {
-            try
-            {
-                signInParams.Password = _credService.DecryptPw(signInParams.Password) ?? signInParams.Password;
-            }
-            catch (CryptographicException e)
-            {
-                if (e.Message != "The length of the data to decrypt is not valid for the size of this key.")
-                {
-                    throw;
-                }
-            }
-
             signInResult = _authService.SignIn(signInParams);
         }
         catch (Exception e) when (e is InvalidLoginException or LdapNotReachableException)
@@ -96,8 +84,8 @@ public class AuthController : ControllerBase
             HttpOnly = true,
             IsEssential = true,
             Expires = valid,
-            Secure = true,
-            SameSite = SameSiteMode.None
+            // Secure = true, // Is used for HTTPS connection
+            // SameSite = SameSiteMode.None // Is used for HTTPS connection
         };
 
         var token = _jwtService.GenerateToken(new AuthToken()

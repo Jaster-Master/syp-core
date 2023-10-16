@@ -1,4 +1,4 @@
-const baseIp = "https://10.90.0.11";
+const baseIp = "http://10.90.0.11";
 export const environment = {
   production: false,
   ipAddress: baseIp,

@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { CredService } from "./core/cred.service";
 import { MainframeService } from "./mainframe.service";
 
 @Injectable({
@@ -7,7 +6,7 @@ import { MainframeService } from "./mainframe.service";
 })
 export class OnboardingService {
 
-  constructor(private mainframe: MainframeService, private credService: CredService) {
+  constructor(private mainframe: MainframeService) {
   }
 
   setEduvidualToken(token: string): Promise<void> {
@@ -28,7 +27,6 @@ export class OnboardingService {
   }
 
   async login(username: string, password: string, redirect: boolean) {
-    const pwEncrypted = await this.credService.encryptPassword(password);
-    await this.mainframe.login(username, pwEncrypted, redirect);
+    await this.mainframe.login(username, password, redirect);
   }
 }
