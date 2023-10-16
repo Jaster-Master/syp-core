@@ -15,11 +15,13 @@ namespace Core.Backend.Secure.Tests
 
 
         [Theory]
-        [InlineData("ölkj")]
+        [InlineData("ölkj@!#%&/()=?")]
         public void Decrypt_Succeed(string password)
         {
-            var credService = this.factory.Services.GetRequiredService<CredService>();
-            credService.DecryptPw("password");
+            var credService = factory.Services.GetRequiredService<CredService>();
+            var encrypted = credService.EncryptPw(password);
+            var decrypted = credService.DecryptPw(encrypted);
+            Assert.Equal(password, decrypted);
         }
     }
 }
