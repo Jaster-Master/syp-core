@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:7022
+@baseUrl = http://localhost:5001
 
 
 ################################################## classes
@@ -17,7 +17,7 @@ Content-type: application/json
    "clazzName": "abc",
    "roomName": "abc",
    "imageBase64": "abc",
-   "studentPcList": 
+   "studentPcList":
    [{
       "studentName": "abc",
       "pcNr": 1

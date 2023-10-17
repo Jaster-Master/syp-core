@@ -2,7 +2,7 @@
     core.backend:
         image: core.backend
         ports:
-            - "7022:7022"
+            - "5001:5001"
         build:
             context: .
             dockerfile: Core.Backend/Dockerfile
@@ -10,7 +10,7 @@
     core.backend.secure:
         image: core.backend.secure
         ports:
-            - "7139:7139"
+            - "5002:5002"
         build:
             context: .
             dockerfile: Core.Backend.Secure/Dockerfile

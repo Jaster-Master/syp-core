@@ -1,50 +1,30 @@
 ﻿{
     "plugins": {
         "polls": {
-            "subRoute": ":4202",
+            "subRoute": ":4301",
             "info": {
-                "name": "Umfragen",
-                "description": "Plugin Polls",
+                "name": "Test-Plugin",
+                "description": "This plugin is to test the plugin system",
                 "teachers": [
                     "Teacher1",
                     "Teacher2"
                 ],
                 "tags": [
-                    "dua moi wos"
+                    "Test"
                 ],
                 "startDate": "1662789600",
                 "endDate": "1663221600",
-                "image": "https://gemeindebund.at/website2020/wp-content/uploads/2020/07/umfrage-fragebogen_br_cirquedesprit-fotolia-com-3.jpg",
-                "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-polls",
+                "image": "https://eu-images.contentstack.com/v3/assets/blt4175b16074920322/blt6aeffbd6b66cbc85/6485f13425a7d7a1bacb83d0/TAMU_20Vet_20Med_20bison1_0.jpeg?width=850&auto=webp&quality=95&format=jpg&disable=upscale",
+                "repoUrl": "https://github.com/Schotzgoblin/name-of-plugin",
                 "repoOwner": "htl-grieskirchen-core",
-                "repoName": "plugin-polls"
-            }
-        },
-        "quote-of-today": {
-            "subRoute": ":4202",
-            "info": {
-                "name": "Quote of Today",
-                "description": "Quote of Today on Login Screen",
-                "teachers": [
-                    "Teacher1",
-                    "Teacher2"
-                ],
-                "tags": [
-                    "quotes"
-                ],
-                "startDate": "1662789600",
-                "endDate": "1663221600",
-                "image": "https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc2MDE0NzkwNTY3ODA0/stay-positive-quotes.jpg",
-                "repoUrl": "https://github.com/htl-grieskirchen-core/plugin-quote-of-today",
-                "repoOwner": "htl-grieskirchen-core",
-                "repoName": "plugin-quote-of-today"
+                "repoName": "name-of-plugin"
             }
         }
     },
     "login": {
-        "subRoute": ":4200/"
+        "subRoute": ":4202/"
     },
     "navigation": {
-        "subRoute": ":4201/"
+        "subRoute": ":4203/"
     }
 }
